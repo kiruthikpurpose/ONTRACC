@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ONTRACC Skills Test</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>ONTRACC Skills Test</h1>
+    </header>
+    
+    <main>
+        <section id="intro">
+            <h2>Welcome to the ONTRACC Skills Test!</h2>
+            <p>Please fill out this form to determine which category best suits your skills: Hackathons, Creations, or Cellathons.</p>
+        </section>
+        
+        <form id="skillsTestForm">
+            <!-- Personal Information -->
+            <div class="form-section">
+                <h3>Personal Information</h3>
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+            </div>
+            
+            <!-- Category Selection -->
+            <div class="form-section">
+                <h3>Category Selection</h3>
+                <div class="form-group">
+                    <label>Select the category that interests you the most:</label>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="hackathons" name="category" value="Hackathons">
+                        <label for="hackathons">Hackathons (Competitive Coding and Problem Solving)</label>
+                    </div>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="creations" name="category" value="Creations">
+                        <label for="creations">Creations (Building Projects and Innovation)</label>
+                    </div>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="cellathons" name="category" value="Cellathons">
+                        <label for="cellathons">Cellathons (Collaboration and Teamwork)</label>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Experience -->
+            <div class="form-section">
+                <h3>Experience</h3>
+                <div class="form-group">
+                    <label for="experience">Years of Experience:</label>
+                    <input type="number" id="experience" name="experience" required>
+                </div>
+                <div class="form-group">
+                    <label for="projects">Describe any projects or work related to your selected categories:</label>
+                    <textarea id="projects" name="projects" rows="4" required></textarea>
+                </div>
+            </div>
+            
+            <!-- Skills -->
+            <div class="form-section">
+                <h3>Skills</h3>
+                <div class="form-group">
+                    <label for="skills">Technical Skills:</label>
+                    <textarea id="skills" name="skills" rows="4" required></textarea>
+                    <button type="button" onclick="addSkillField()">Add More Skills</button>
+                </div>
+                <div id="additionalSkills"></div>
+            </div>
+            
+            <!-- Certifications and Education -->
+            <div class="form-section">
+                <h3>Certifications and Education</h3>
+                <div class="form-group">
+                    <label for="certifications">Certifications:</label>
+                    <textarea id="certifications" name="certifications" rows="4"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="education">Education:</label>
+                    <textarea id="education" name="education" rows="4"></textarea>
+                </div>
+            </div>
+            
+            <!-- Hobbies -->
+            <div class="form-section">
+                <h3>Hobbies</h3>
+                <div class="form-group">
+                    <label for="hobbies">Hobbies and Interests:</label>
+                    <textarea id="hobbies" name="hobbies" rows="4"></textarea>
+                </div>
+            </div>
+            
+            <!-- Submit Button -->
+            <div class="form-group">
+                <input type="submit" value="Submit">
+            </div>
+        </form>
+        
+        <!-- Results Section -->
+        <section id="results" class="hidden">
+            <h2>Your Category Result</h2>
+            <div id="categoryResult"></div>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2024 ONTRACC Skills Test. All rights reserved.</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
